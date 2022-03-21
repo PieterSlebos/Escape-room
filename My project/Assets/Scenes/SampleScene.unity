@@ -341,7 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - tag: Ball
-    size: 50
+    size: 10
     prefab: {fileID: 633349105}
 --- !u!4 &379574070
 Transform:
@@ -820,6 +820,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f321cf5a32468f44892948295d205fc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1559491929
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1559491931}
+  - component: {fileID: 1559491930}
+  m_Layer: 0
+  m_Name: ballSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1559491930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559491929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3312c90c05f6e4a8e759842ce16c40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1559491931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559491929}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1794360236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6188766578926807273, guid: 11cef78e5581b444b889059f2679504a, type: 3}
