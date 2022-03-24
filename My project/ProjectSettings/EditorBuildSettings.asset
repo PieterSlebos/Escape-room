@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/__Scenes/Level_Tobias/Scene_Level_Tobias.unity
     guid: a475d49d8f1c1d2488d2501db1f062b6
+  - enabled: 1
+    path: Assets/__Scenes/Level_balls/Scene_level_balls.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

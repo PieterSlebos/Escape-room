@@ -392,6 +392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayButton: {fileID: 546231226}
+  Scene: Scene_Lobby
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

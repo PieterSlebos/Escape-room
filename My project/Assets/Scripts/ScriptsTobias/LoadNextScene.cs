@@ -20,7 +20,6 @@ public class LoadNextScene : MonoBehaviour
     void TaskOnClick()
     {
         //Output this to console when Button1 or Button3 is clicked
-        Debug.Log("You have clicked the button!");
         SceneManager.LoadScene("Scene_Lobby");
     }
 
