@@ -71,7 +71,7 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
-      "url": "https://packages.unity.com/"
+      "url": "https://packages.unity.com"
     },
     "com.unity.sysroot.linux-x86_64": {
       "version": "1.0.0",

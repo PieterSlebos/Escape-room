@@ -6547,7 +6547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17deec5fc6369764e85438d76e8ab3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextScene: Scene_level_balls
+  NextScene: Level_balls
 --- !u!54 &1854667454
 Rigidbody:
   m_ObjectHideFlags: 0
