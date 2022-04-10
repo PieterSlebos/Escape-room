@@ -39,7 +39,7 @@ public class Pickup : MonoBehaviour
     {
         if (Vector3.Distance(heldObj.transform.position, holdParent.position) > 0.1f)
         {
-            Vector3 moveDirection = (holdParent.position - heldObj.transform.position);
+            Vector3 moveDirection = holdParent.position - heldObj.transform.position;
             heldObj.GetComponent<Rigidbody>().AddForce(moveDirection * moveForce);
         }
     }
