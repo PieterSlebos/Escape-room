@@ -7,7 +7,7 @@ public class Pickup : MonoBehaviour
     public float pickUpRange = 5;
     public float moveForce = 250;
     public Transform holdParent;
-
+    public LayerMask layer;
     private GameObject heldObj;
 
     // Update is called once per frame
@@ -37,6 +37,11 @@ public class Pickup : MonoBehaviour
 
     void MoveObject()
     {
+        //RaycastHit hit;
+        //if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, pickUpRange, layer))
+       // { 
+            //Debug.Log(hit.collider.transform.position);
+        //}
         if (Vector3.Distance(heldObj.transform.position, holdParent.position) > 0.1f)
         {
             Vector3 moveDirection = holdParent.position - heldObj.transform.position;
