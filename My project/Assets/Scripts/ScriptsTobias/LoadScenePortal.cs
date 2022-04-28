@@ -8,12 +8,13 @@ using UnityEngine.SceneManagement;
 public class LoadScenePortal : MonoBehaviour
 {
 
+    public bool loadRandomScene;
+
     public string nextScene = "";
 
-    public List<string> ListOfScenes = new List<string>();
-
-    public int randomSceneNumber;
-    public string randomSceneName;
+    [HideInInspector] public List<string> ListOfScenes = new List<string>();
+    [HideInInspector] public int randomSceneNumber;
+    [HideInInspector] public string randomSceneName;
 
     private void Start()
     {
@@ -57,7 +58,7 @@ public class LoadScenePortal : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            if(nextScene == "Random")
+            if(loadRandomScene)
             {
                 LoadRandomScene();
                 SceneManager.LoadScene(randomSceneName);
