@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class OnCollision : MonoBehaviour
 {
+    public int maxHealth = 100;
+    public int currentHealth;
+
+    public Healthbar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
-     
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+
     }
 
     // Update is called once per frame
@@ -17,13 +23,17 @@ public class OnCollision : MonoBehaviour
         
         
     }
-    private void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider other)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(gameObject);
+            TakeDamage(20);
         }
+    }
 
-       
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
     }
 }
