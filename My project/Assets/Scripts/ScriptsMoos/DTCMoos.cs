@@ -16,13 +16,11 @@ public class DTCMoos : MonoBehaviour
             if (openTrigger)
             {
                 myDoor.Play("Door_open", 0, 0.0f);
-                gameObject.SetActive(false);
             }
 
             else if (closedTrigger)
             {
                 myDoor.Play("Door_close", 0, 0.0f);
-                gameObject.SetActive(false);
             }
         }
     }
