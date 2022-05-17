@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2593104346286420878}
   - component: {fileID: 398578689250078203}
   - component: {fileID: 2428917956262290556}
+  - component: {fileID: 8291044709388740800}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Enemy
@@ -125,3 +126,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32ad29ae9182ba47931a20132059db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8291044709388740800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3966470089492591064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50986c1e30a1c444b7b32862b21179a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 30
