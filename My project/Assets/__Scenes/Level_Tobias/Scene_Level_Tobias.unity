@@ -332,7 +332,7 @@ MonoBehaviour:
   m_TextViewport: {fileID: 1612767869}
   m_TextComponent: {fileID: 1313491380}
   m_Placeholder: {fileID: 639563233}
-  m_VerticalScrollbar: {fileID: 49915786}
+  m_VerticalScrollbar: {fileID: 0}
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
@@ -340,12 +340,12 @@ MonoBehaviour:
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
-  m_LineType: 2
+  m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
   m_CharacterValidation: 0
   m_RegexValue: 
-  m_GlobalPointSize: 18
+  m_GlobalPointSize: 14
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 0
   m_isRichTextEditingAllowed: 0
-  m_LineLimit: 200
+  m_LineLimit: 0
   m_InputValidator: {fileID: 0}
 --- !u!114 &166679892
 MonoBehaviour:
@@ -666,6 +666,7 @@ GameObject:
   - component: {fileID: 789838642}
   - component: {fileID: 789838641}
   - component: {fileID: 789838640}
+  - component: {fileID: 789838643}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -755,6 +756,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &789838643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789838638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62d65ff4177f37f4f9e99cb0818ae70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 1313491380}
 --- !u!1 &955337737
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +936,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
