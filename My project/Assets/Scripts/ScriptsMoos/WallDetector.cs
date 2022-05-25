@@ -8,9 +8,9 @@ public class WallDetector : MonoBehaviour
 
     void Update()
     {
+        Ray ray = new Ray(transform.position, transform.forward);
+        Debug.DrawRay(Vector3.zero, Vector3.forward * 20);
 
-        Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward));
-
-        if (Vector3.Distance(transform.position, Holder.position) > Vector3.Distance(transform.position, RaycastHit) ) ;
+        //if (Vector3.Distance(transform.position, Holder.position) > Vector3.Distance(transform.position, RaycastHit) ) ;
     }
 }
