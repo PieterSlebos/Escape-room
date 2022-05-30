@@ -34,7 +34,7 @@ public class TestColor : MonoBehaviour
 
         if (textField.text != textFieldText)
         {
-            Debug.Log(textField.text);
+            // Debug.Log(textField.text);
             textFieldText = textField.text;
 
 
