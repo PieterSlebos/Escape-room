@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.2257134, b: 0.30692226, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -434,14 +434,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306439979}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 34.69423, y: 3.3, z: 46.17267}
+  m_LocalPosition: {x: 29.61, y: 3.3, z: 36.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 965246073}
   - {fileID: 311668441}
   - {fileID: 2046861228}
   m_Father: {fileID: 1474395548}
-  m_RootOrder: 0
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &306439981
 MonoBehaviour:
@@ -725,7 +725,7 @@ GameObject:
   - component: {fileID: 367865891}
   - component: {fileID: 367865890}
   m_Layer: 6
-  m_Name: we (3)
+  m_Name: Plank (3)
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1301,8 +1301,8 @@ Transform:
   m_Children:
   - {fileID: 1088414885}
   - {fileID: 367865889}
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1474395548}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -11.531, y: -105.052, z: 9.498}
 --- !u!1 &965246072
 GameObject:
@@ -1409,13 +1409,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991506103}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 29.007, y: 6.87, z: 63.852}
   m_LocalScale: {x: 1, y: 1, z: 0.27521923}
   m_Children:
   - {fileID: 1573327879}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1474395548}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &991506105
 Animator:
@@ -1473,7 +1473,7 @@ Transform:
   - {fileID: 528170281}
   - {fileID: 1899685186}
   m_Father: {fileID: 1474395548}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1088414881
 GameObject:
@@ -1488,7 +1488,7 @@ GameObject:
   - component: {fileID: 1088414883}
   - component: {fileID: 1088414882}
   m_Layer: 6
-  m_Name: we (2)
+  m_Name: Plank (2)
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1791,8 +1791,8 @@ Transform:
   m_Children:
   - {fileID: 1827794859}
   - {fileID: 2083975960}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1474395548}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: -11.531, y: -12.052, z: 9.498}
 --- !u!1 &1445254806
 GameObject:
@@ -1832,7 +1832,7 @@ Transform:
   - {fileID: 1775286668}
   - {fileID: 1247693201}
   m_Father: {fileID: 1474395548}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1462199973
 GameObject:
@@ -1957,9 +1957,16 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 306439980}
   - {fileID: 1009914348}
   - {fileID: 1445254807}
+  - {fileID: 2070093255}
+  - {fileID: 932622733}
+  - {fileID: 1356197438}
+  - {fileID: 991506104}
+  - {fileID: 1796491905}
+  - {fileID: 2035983309}
+  - {fileID: 1641964178}
+  - {fileID: 306439980}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2512,11 +2519,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1641964173}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 12.44, y: 14.25, z: 69.28}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1474395548}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1736002388
@@ -2580,12 +2587,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736002388}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.2, y: 4.32, z: 53.8}
-  m_LocalScale: {x: 2, y: 0.4737946, z: 2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.2800002, z: -0.005001068}
+  m_LocalScale: {x: 1, y: 0.9475892, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1796491905}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1775286667
 GameObject:
@@ -2887,12 +2894,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796491900}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 27.2, y: 3.68, z: 53.81}
   m_LocalScale: {x: 2, y: 0.5, z: 2}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Children:
+  - {fileID: 1736002393}
+  m_Father: {fileID: 1474395548}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1800526006
 GameObject:
@@ -3003,7 +3011,7 @@ GameObject:
   - component: {fileID: 1827794861}
   - component: {fileID: 1827794860}
   m_Layer: 6
-  m_Name: we (2)
+  m_Name: Plank (4)
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3478,12 +3486,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035983304}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.649994, y: 4.91, z: 53.549995}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 29.74, y: 4.25, z: 42.49}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_Father: {fileID: 1474395548}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2046861227
 GameObject:
@@ -3528,7 +3536,7 @@ GameObject:
   - component: {fileID: 2070093253}
   - component: {fileID: 2070093252}
   m_Layer: 6
-  m_Name: we
+  m_Name: Plank
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3605,10 +3613,10 @@ Transform:
   m_GameObject: {fileID: 2070093251}
   m_LocalRotation: {x: -0.1350017, y: -0.021802522, z: -0.1515109, w: 0.9789503}
   m_LocalPosition: {x: 17.96, y: 5.38, z: 29.59}
-  m_LocalScale: {x: 15.543046, y: -0.22169, z: 2.392}
+  m_LocalScale: {x: 15.543047, y: -0.22169001, z: 2.3920002}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1474395548}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -15.719, y: -0.106, z: -17.581}
 --- !u!1 &2083975959
 GameObject:
@@ -3623,7 +3631,7 @@ GameObject:
   - component: {fileID: 2083975962}
   - component: {fileID: 2083975961}
   m_Layer: 6
-  m_Name: we (3)
+  m_Name: Plank (5)
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
