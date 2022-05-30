@@ -10,7 +10,8 @@ public class LoadScenePortal : MonoBehaviour
 
     public bool loadRandomScene;
 
-    public string nextScene = "";
+    [Tooltip("Select scene")]
+    public SceneNamesEnum nextScene = new SceneNamesEnum();
 
     [HideInInspector] public List<string> ListOfScenes = new List<string>();
     [HideInInspector] public int randomSceneNumber;
@@ -65,7 +66,7 @@ public class LoadScenePortal : MonoBehaviour
             } 
             else
             {
-                SceneManager.LoadScene(nextScene);
+                SceneManager.LoadScene(nextScene.ToString());
             }
         }
     }

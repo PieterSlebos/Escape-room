@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 
 
-public class LevelCountDown : MonoBehaviour
+public class LevelTimeCountDown : MonoBehaviour
 {
     [Tooltip("Minutes : Seconds | no spaces, if 0 seconds please write ##:00")]
     public string TimeToSolve;
