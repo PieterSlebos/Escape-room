@@ -6,9 +6,6 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-
-
-
 public class LevelTimeCountDown : MonoBehaviour
 {
     [Tooltip("Minutes : Seconds | no spaces, if 0 seconds please write ##:00")]
@@ -21,12 +18,11 @@ public class LevelTimeCountDown : MonoBehaviour
 
     public static bool LevelTimeIsUp = false;
 
-    private DateTime CurrenTime = DateTime.Now;
-    private DateTime EndDateTime;
-    private string TimeLeft;
-
-    private int MinutesToSolve;
-    private int SecondsToSolve;
+    private DateTime _currentTime = DateTime.Now;
+    private DateTime _endDateTime;
+    private string _timeLeft;
+    private int _minutesToSolve;
+    private int _secondsToSolve;
 
     public Image img;
 
@@ -44,17 +40,14 @@ public class LevelTimeCountDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(TimeLeft == "00:00")
+        if(_timeLeft == "00:00")
         {
-            // Something to do when done
-
             TimeIsUp();
-
         } 
         else
         {
             CalculateDifference();
-            CountDownText.text = TimeLeft;
+            CountDownText.text = _timeLeft;
         }
     }
 
@@ -69,25 +62,25 @@ public class LevelTimeCountDown : MonoBehaviour
         minutesString = spiltTime[0];
         secondsString = spiltTime[1];
 
-        MinutesToSolve = int.Parse(minutesString);
-        SecondsToSolve = int.Parse(secondsString);
+        _minutesToSolve = int.Parse(minutesString);
+        _secondsToSolve = int.Parse(secondsString);
     }
 
     void CalculateEndTime()
     {
-        TimeSpan timeToSolveTS = new TimeSpan(0, MinutesToSolve, SecondsToSolve);
+        TimeSpan timeToSolveTS = new TimeSpan(0, _minutesToSolve, _secondsToSolve);
 
-        EndDateTime = DateTime.Now.Add(timeToSolveTS);
+        _endDateTime = DateTime.Now.Add(timeToSolveTS);
     }
 
     void CalculateDifference()
     {
-        CurrenTime = DateTime.Now;
+        _currentTime = DateTime.Now;
 
-        int minutes = (EndDateTime - CurrenTime).Minutes;
-        int seconds = (EndDateTime - CurrenTime).Seconds;
+        int minutes = (_endDateTime - _currentTime).Minutes;
+        int seconds = (_endDateTime - _currentTime).Seconds;
 
-        TimeLeft = string.Format("{0:D2}:{1:D2}", minutes, seconds);
+        _timeLeft = string.Format("{0:D2}:{1:D2}", minutes, seconds);
     }
 
     void TimeIsUp()
