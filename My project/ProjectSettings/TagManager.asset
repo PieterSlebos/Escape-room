@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Portal
   - Cube
+  - ObjectHolder
   layers:
   - Default
   - TransparentFX
