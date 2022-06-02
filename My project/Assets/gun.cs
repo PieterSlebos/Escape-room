@@ -9,6 +9,8 @@ public class gun : MonoBehaviour
     public Camera fpsCam;
     public LayerMask collisionMask;
 
+    public ParticleSystem muzzleFlash;
+
     private void Start()
     {
         fpsCam = Camera.main;
@@ -24,6 +26,8 @@ public class gun : MonoBehaviour
     }
     void shoot()
     {
+        muzzleFlash.Play();
+
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range, collisionMask))
         {
