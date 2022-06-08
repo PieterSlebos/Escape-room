@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.172768, g: 0.21589169, b: 0.29782546, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -735,8 +735,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17deec5fc6369764e85438d76e8ab3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadRandomScene: 1
-  nextScene: 2
+  loadRandomScene: 0
+  nextScene: 3
   ListOfScenes: []
   randomSceneNumber: 0
   randomSceneName: 
@@ -1350,7 +1350,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 336930884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc41e0ed69fb74f48a852689c6fc0cad, type: 3}
+  m_Script: {fileID: 11500000, guid: 60986aea165be8e439a97566bde3d528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myDoor: {fileID: 324196283}
@@ -2365,8 +2365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17deec5fc6369764e85438d76e8ab3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadRandomScene: 1
-  nextScene: 3
+  loadRandomScene: 0
+  nextScene: 2
   ListOfScenes: []
   randomSceneNumber: 0
   randomSceneName: 
@@ -4062,12 +4062,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1207747309}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc41e0ed69fb74f48a852689c6fc0cad, type: 3}
+  m_Script: {fileID: 11500000, guid: 79e8e721f0897c6449120537a9e92478, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myDoor: {fileID: 203801225}
-  openTrigger: 1
-  closedTrigger: 0
 --- !u!65 &1207747312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6521,8 +6518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17deec5fc6369764e85438d76e8ab3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadRandomScene: 1
-  nextScene: 0
+  loadRandomScene: 0
+  nextScene: 1
   ListOfScenes: []
   randomSceneNumber: 0
   randomSceneName: 
