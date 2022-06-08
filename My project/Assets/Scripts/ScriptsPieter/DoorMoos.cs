@@ -15,7 +15,7 @@ public class DoorMoos : MonoBehaviour
     private void Start()
     {
         collissionCoin = GameObject.FindObjectOfType<CollissionCoin>();
-        checkScript = GameObject.FindObjectsOfType<CheckScript>();
+        checkScript = GameObject.FindObjectOfType<CheckScript>();
 
     }
 
