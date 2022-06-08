@@ -1,0 +1,12 @@
+{
+    "id" : 1,
+    "missionTitle" : "Hello World!",
+    "missionDescription" : "Print \"Hello, world!\" on the console. In Python.",
+    "missionLanguageName" : "Python",
+    "missionLanguageColor" : "yellow",
+    "startInput" : "print('Hello, world!')",
+    "correctAnswers" : [
+        "print('Hello, world!')",
+        "print(\"Hello, world!\")"
+    ]
+}
