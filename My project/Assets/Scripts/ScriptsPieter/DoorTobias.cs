@@ -9,20 +9,22 @@ public class DoorTobias : MonoBehaviour
     [SerializeField] private bool openTrigger = false;
     [SerializeField] private bool closedTrigger = false;
 
-    private CollissionCoin collissionCoin;
+    private GameControler gameControler;
 
     private void Start()
     {
-        collissionCoin = GameObject.FindObjectOfType<CollissionCoin>();
+        gameControler = GameObject.FindObjectOfType<GameControler>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log(openTrigger);
             if (openTrigger)
             {
-                if (collissionCoin.levelBallsSucceed == true)
+
+                if (gameControler.levelBallsSucceed == true)
                 {
                     myDoor.Play("DoorOpen", 0, 0.0f);
                     gameObject.SetActive(false);

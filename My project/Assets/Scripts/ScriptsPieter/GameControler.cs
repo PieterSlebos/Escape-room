@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameControler : MonoBehaviour
 {
@@ -8,42 +9,24 @@ public class GameControler : MonoBehaviour
     public Transform SpawnPoint;
     public GameObject coin;
 
-    public float maxX;
-    public float pointZ;
-    public float minX;
+    public bool levelBallsSucceed;
+    public int coinsCollected;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("spawnBall", 5f, 0.2f);
-        InvokeRepeating("spawnCoin", 10f, 10f);
-
+        coinsCollected = 0;
+        DontDestroyOnLoad(this.gameObject);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-    void spawnCoin()
-    {
-        float randomX = Random.Range(minX, maxX);
-
-        Vector3 randomSpawnPos = new Vector3(randomX, 10f, pointZ);
-
-        Instantiate(coin, randomSpawnPos, Quaternion.identity);
-
-
-    }
-    void spawnBall()
-    {
-        float randomX = Random.Range(minX, maxX);
-
-        Vector3 randomSpawnPos = new Vector3(randomX, 10f, pointZ);
-
-        Instantiate(ball, randomSpawnPos, Quaternion.identity);
-        ball.tag = "Enemy";
-
+        if (coinsCollected == 5 && !levelBallsSucceed)
+        {
+            SceneManager.LoadScene("Scene_Lobby");
+            levelBallsSucceed = true;
+        }
     }
 }

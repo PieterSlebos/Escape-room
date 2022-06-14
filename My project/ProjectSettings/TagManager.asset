@@ -10,6 +10,7 @@ TagManager:
   - Portal
   - Cube
   - ObjectHolder
+  - Coin
   layers:
   - Default
   - TransparentFX
