@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 using UnityEngine.SceneManagement;
 
 public class LevelTimeCountDown : MonoBehaviour
@@ -11,20 +9,20 @@ public class LevelTimeCountDown : MonoBehaviour
     [Tooltip("Minutes : Seconds | no spaces, if 0 seconds please write ##:00")]
     public string TimeToSolve;
 
-    [Tooltip("Select scene after time is up")]
+    [Tooltip("Select scene after time is up.")]
     public SceneNamesEnum enumSceneDropDownSelect = new SceneNamesEnum();
 
+    [Tooltip("Textbox where the time is projected.")]
     public Text CountDownText;
 
-    public static bool LevelTimeIsUp = false;
+    [Tooltip("Image that fades in after the time is up. Before you are send to the next scene.")]
+    public Image Img;
 
     private DateTime _currentTime = DateTime.Now;
     private DateTime _endDateTime;
     private string _timeLeft;
     private int _minutesToSolve;
-    private int _secondsToSolve;
-
-    public Image img;
+    private int _secondsToSolve; 
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +31,7 @@ public class LevelTimeCountDown : MonoBehaviour
         CalculateEndTime();
         CalculateDifference();
 
-        img.color = new Color(1, 1, 1, 0);
-
+        Img.color = new Color(1, 1, 1, 0); // Makes image invisible
     }
 
     // Update is called once per frame
@@ -85,9 +82,7 @@ public class LevelTimeCountDown : MonoBehaviour
 
     void TimeIsUp()
     {
-        LevelTimeIsUp = true;
         StartCoroutine(FadeImageToNextScene()); // Fades in image + waits + next scene
-
     }
 
     IEnumerator FadeImageToNextScene() // https://forum.unity.com/threads/simple-ui-animation-fade-in-fade-out-c.439825/
@@ -95,7 +90,7 @@ public class LevelTimeCountDown : MonoBehaviour
         for (float i = 0; i <= 1; i += Time.deltaTime)
         {
             // set color with i as alpha
-            img.color = new Color(1, 1, 1, i);
+            Img.color = new Color(1, 1, 1, i);
             yield return null;
         }
 
