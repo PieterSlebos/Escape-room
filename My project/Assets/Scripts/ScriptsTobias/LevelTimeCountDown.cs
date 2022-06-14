@@ -22,7 +22,7 @@ public class LevelTimeCountDown : MonoBehaviour
     private DateTime _endDateTime;
     private string _timeLeft;
     private int _minutesToSolve;
-    private int _secondsToSolve; 
+    private int _secondsToSolve;
 
     // Start is called before the first frame update
     void Start()
