@@ -47,7 +47,7 @@ public class CheckScript : MonoBehaviour
     {
         if (inputTextField.text.Contains(answerOfMission))
         {
-            outputTextField.text = "Hello, world!";
+            outputTextField.text = "Hello, world! <br><br><color=green>Correct!</color>";
             LevelSucceed();
         }
         else
