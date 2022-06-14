@@ -26,7 +26,8 @@ public class DoorMoos : MonoBehaviour
             if (openTrigger)
             {
                 if (gameControler.levelBallsSucceed == true && checkScript.LevelIdeSucceed == true)
-                {
+                { 
+                
                     myDoor.Play("DoorOpen", 0, 0.0f);
                     gameObject.SetActive(false);
 

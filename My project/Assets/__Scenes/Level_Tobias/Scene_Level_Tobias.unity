@@ -433,10 +433,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52fdef4207504c949b52b35d8ffc43ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToSolve: 5:00
+  TimeToSolve: 0:05
   enumSceneDropDownSelect: 0
   CountDownText: {fileID: 1767213585}
   Img: {fileID: 0}
+  LevelIdeSucceed: 0
 --- !u!1 &296812352
 GameObject:
   m_ObjectHideFlags: 0
