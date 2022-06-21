@@ -14,8 +14,8 @@ public class ballSpawner : MonoBehaviour
     {
         objectPooler = ObjectPooler.Instance;
 
-        InvokeRepeating("spawnBall", 5f, 100f);
-        InvokeRepeating("spawnCoin", 1f, 1f);
+        InvokeRepeating("spawnBall", 5f, 1f);
+        InvokeRepeating("spawnCoin", 5f, 3f);
     }
   
     void spawnCoin()
