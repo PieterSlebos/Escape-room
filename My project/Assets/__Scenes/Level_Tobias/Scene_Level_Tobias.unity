@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 291944925}
   - component: {fileID: 291944924}
   - component: {fileID: 291944930}
+  - component: {fileID: 291944931}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -428,7 +429,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291944923}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52fdef4207504c949b52b35d8ffc43ee, type: 3}
   m_Name: 
@@ -437,7 +438,18 @@ MonoBehaviour:
   enumSceneDropDownSelect: 0
   CountDownText: {fileID: 1767213585}
   Img: {fileID: 0}
-  LevelIdeSucceed: 0
+--- !u!114 &291944931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291944923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0971b3df17a80544985bf3192ef4bfac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &296812352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1613,10 +1625,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b51681f713348c9498d3957e701f9a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textJSON: {fileID: 4900000, guid: a300fac3dcaf9394b956e4c8c5f5f539, type: 3}
-  missionTitleTB: {fileID: 533844452}
-  missionDescrTB: {fileID: 1316468530}
-  ideInput: {fileID: 1197369884}
+  MissionTitleTB: {fileID: 533844452}
+  MissionDescrTB: {fileID: 1316468530}
+  IdeInput: {fileID: 1197369884}
 --- !u!1 &855989636
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,10 +1798,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c123084df425bcf4a94ce624a9ebe092, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runButton: {fileID: 892616034}
-  textJSON: {fileID: 4900000, guid: a300fac3dcaf9394b956e4c8c5f5f539, type: 3}
-  inputTextField: {fileID: 1197369884}
-  outputTextField: {fileID: 465080336}
+  RunButton: {fileID: 892616034}
+  InputTextField: {fileID: 1197369884}
+  OutputTextField: {fileID: 465080336}
+  EnumSceneDropDownSelect: 0
   LevelIdeSucceed: 0
 --- !u!1 &950501367
 GameObject:
