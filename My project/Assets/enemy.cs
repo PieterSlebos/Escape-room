@@ -6,9 +6,9 @@ public class enemy : MonoBehaviour
 
     public float health = 10f;
 
-    public void takeDamage (float amount)
+    public void takeDamage (float damage)
     {
-        health -= amount;
+        health -= damage;
         if ( health <= 0f)
         {
             Die();
