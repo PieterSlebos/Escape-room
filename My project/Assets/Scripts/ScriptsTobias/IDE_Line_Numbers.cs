@@ -6,11 +6,8 @@ using TMPro;
 
 public class IDE_Line_Numbers : MonoBehaviour
 {
-
     public TextMeshProUGUI IdeInput;
     public TextMeshProUGUI LineNumbersField;
-    //public TextMeshPro LineNum;
-    //public TMP_Text LineNum2;
 
     private int _totalLineNum;
 

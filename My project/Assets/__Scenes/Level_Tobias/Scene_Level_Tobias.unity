@@ -294,7 +294,6 @@ GameObject:
   - component: {fileID: 291944925}
   - component: {fileID: 291944924}
   - component: {fileID: 291944930}
-  - component: {fileID: 291944931}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -437,19 +436,7 @@ MonoBehaviour:
   TimeToSolve: 0:05
   enumSceneDropDownSelect: 0
   CountDownText: {fileID: 1767213585}
-  Img: {fileID: 0}
---- !u!114 &291944931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 291944923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0971b3df17a80544985bf3192ef4bfac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  Img: {fileID: 1648958229}
 --- !u!1 &296812352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,7 +1788,6 @@ MonoBehaviour:
   RunButton: {fileID: 892616034}
   InputTextField: {fileID: 1197369884}
   OutputTextField: {fileID: 465080336}
-  EnumSceneDropDownSelect: 0
   LevelIdeSucceed: 0
 --- !u!1 &950501367
 GameObject:
@@ -3217,7 +3203,7 @@ GameObject:
   - component: {fileID: 1767213586}
   - component: {fileID: 1767213585}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3281,7 +3267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 545.47003, y: 412}
+  m_AnchoredPosition: {x: 555.22003, y: 396}
   m_SizeDelta: {x: 70.0599, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1879923064

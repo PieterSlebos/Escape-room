@@ -16,6 +16,7 @@ public class DoorMoos : MonoBehaviour
     {
         gameControler = GameObject.FindObjectOfType<GameControler>();
         checkScript = GameObject.FindObjectOfType<CheckScript>();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,13 +25,15 @@ public class DoorMoos : MonoBehaviour
         {
             if (openTrigger)
             {
-                Debug.Log(checkScript.LevelIdeSucceed);
                 if (gameControler.levelBallsSucceed == true && checkScript.LevelIdeSucceed == true)
-                {
+                { 
+                
                     myDoor.Play("DoorOpen", 0, 0.0f);
                     gameObject.SetActive(false);
+
                 }
             }
+
             else if (closedTrigger)
             {
                 myDoor.Play("DoorClose", 0, 0.0f);

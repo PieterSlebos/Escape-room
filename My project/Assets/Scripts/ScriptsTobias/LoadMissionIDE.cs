@@ -1,9 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 using Assets.Scripts.ScriptsTobias;
 using System.IO;
+//namespace Assets.Scripts.ScriptsTobias;
 
 public class LoadMissionIDE : MonoBehaviour
 {
@@ -17,7 +18,10 @@ public class LoadMissionIDE : MonoBehaviour
     public TextMeshProUGUI IdeInput;
 
     // Get and fill MissionVariables
-    private MissionVariables _missionVariables { get {
+    private MissionVariables _missionVariables
+    {
+        get
+        {
             return LoadJson();
         }
     }
@@ -56,7 +60,7 @@ public class LoadMissionIDE : MonoBehaviour
         tempDescr = "<color=\"" + _missionVariables.missionLanguageColor + "\">" + _missionVariables.missionLanguageName + "</color>";
         tempDescr += "<br><br>";
         tempDescr += _missionVariables.missionDescription;
-
+        
         MissionDescrTB.text = tempDescr;
     }
 }
