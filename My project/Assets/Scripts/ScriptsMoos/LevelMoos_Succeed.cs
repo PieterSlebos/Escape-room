@@ -1,17 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelMoos_Succeed : MonoBehaviour
 {
-    public GameObject screen;
+    public Text text;
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Player"))
         {
-            var x = Instantiate(screen, new Vector3(0, 0, 0), Quaternion.identity);
-            //gameObject.SetActive(false);
+            text.text = "CONGRATS, YOU BEAT THE GAME!";
         }
     }
 }
