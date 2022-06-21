@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 291944925}
   - component: {fileID: 291944924}
   - component: {fileID: 291944930}
+  - component: {fileID: 291944931}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -437,6 +438,18 @@ MonoBehaviour:
   enumSceneDropDownSelect: 0
   CountDownText: {fileID: 1767213585}
   Img: {fileID: 1648958229}
+--- !u!114 &291944931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291944923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf583b81a3131642a4a969fe1ffe6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &296812352
 GameObject:
   m_ObjectHideFlags: 0
