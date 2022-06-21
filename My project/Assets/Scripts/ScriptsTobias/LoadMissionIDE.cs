@@ -2,69 +2,61 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Assets.Scripts.ScriptsTobias;
+using System.IO;
 
 public class LoadMissionIDE : MonoBehaviour
 {
-    
-    [Header("Files")]
-
-    [Tooltip("File that contains the JSON file with all the missions.")]
-    public TextAsset textJSON;
-
-    [Header("Field inputs")]
-
     [Tooltip("Mission title textbox")]
-    public TextMeshProUGUI missionTitleTB;
+    public TextMeshProUGUI MissionTitleTB;
 
     [Tooltip("Mission description textbox")]
-    public TextMeshProUGUI missionDescrTB;
+    public TextMeshProUGUI MissionDescrTB;
 
     [Tooltip("IDE input textbox")]
-    public TextMeshProUGUI ideInput;
+    public TextMeshProUGUI IdeInput;
 
-    public class MissionVariables
-    {
-        public int id;
-        public string missionTitle;
-        public string missionDescription;
-        public string missionLanguageName;
-        public string missionLanguageColor;
-        public string startInput;
+    // Get and fill MissionVariables
+    private MissionVariables _missionVariables { get {
+            return LoadJson();
+        }
     }
 
-    MissionVariables myObject = new MissionVariables();
+    public MissionVariables LoadJson()
+    {
+        MissionVariables items = new MissionVariables();
+
+        using (StreamReader r = new StreamReader("Assets/JSON/JSON_Tobias/Level_IDE/IdeMissionJSON.json"))
+        {
+            string json = r.ReadToEnd();
+            items = JsonUtility.FromJson<MissionVariables>(json);
+        }
+
+        return items;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        myObject = JsonUtility.FromJson<MissionVariables>(textJSON.text);
-
+        LoadJson();
         FillVariables();
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
     }
 
     void FillVariables()
     {
-        missionTitleTB.text = myObject.missionTitle;
         BuildDesc();
-        ideInput.text = myObject.startInput;
-        //missionDescrTB.text = myObject.missionDescription;
+        MissionTitleTB.text = _missionVariables.missionTitle;
+        IdeInput.text = _missionVariables.startInput;
     }
 
-    void BuildDesc()
+    void BuildDesc() // Build description textbox text
     {
-        string TempDescr;
+        string tempDescr;
 
-        TempDescr = "<color=\"" + myObject.missionLanguageColor + "\">" + myObject.missionLanguageName + "</color>";
-        TempDescr += "<br><br>";
-        TempDescr += myObject.missionDescription;
+        tempDescr = "<color=\"" + _missionVariables.missionLanguageColor + "\">" + _missionVariables.missionLanguageName + "</color>";
+        tempDescr += "<br><br>";
+        tempDescr += _missionVariables.missionDescription;
 
-        missionDescrTB.text = TempDescr;
+        MissionDescrTB.text = tempDescr;
     }
 }

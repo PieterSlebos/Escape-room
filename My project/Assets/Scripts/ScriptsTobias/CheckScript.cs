@@ -3,61 +3,88 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+using Assets.Scripts.ScriptsTobias;
+using System.IO;
 
 public class CheckScript : MonoBehaviour
 {
-
     [Tooltip("'Run' button.")]
-    public Button runButton;
-
-    [Tooltip("File that contains the JSON file with all the missions.")]
-    public TextAsset textJSON;
+    public Button RunButton;
 
     [Tooltip("IDE input textbox")]
-    public TextMeshProUGUI inputTextField;
+    public TextMeshProUGUI InputTextField;
 
     [Tooltip("IDE output textbox")]
-    public TextMeshProUGUI outputTextField;
+    public TextMeshProUGUI OutputTextField;
 
-    public class CorrectAnswers
-    {
-        public string correctAnswers;
-    }
+    [Tooltip("Select scene after complete.")]
+    public SceneNamesEnum EnumSceneDropDownSelect = new SceneNamesEnum();
 
-    CorrectAnswers myObject = new CorrectAnswers();
-
-    private string answerOfMission = "print('Hello, world!')";
-
+    [HideInInspector]
     public bool LevelIdeSucceed;
 
+    private bool _answerCorrect = false;
+
+    // Get and fill MissionVariables
+    private MissionVariables _missionVariables { get {
+            return LoadJson();
+        }
+    }
+
+
+    public MissionVariables LoadJson()
+    {
+        MissionVariables items = new MissionVariables();
+
+        using (StreamReader r = new StreamReader("Assets/JSON/JSON_Tobias/Level_IDE/IdeMissionJSON.json"))
+        {
+            string json = r.ReadToEnd();
+            items = JsonUtility.FromJson<MissionVariables>(json);
+        }
+
+        return items;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
+        LoadJson();
 
-        myObject = JsonUtility.FromJson<CorrectAnswers>(textJSON.text);
-
-        Debug.Log(myObject.correctAnswers.ToString());
-        outputTextField.text = myObject.correctAnswers.ToString();
-
-        Button btn = runButton.GetComponent<Button>();
+        Button btn = RunButton.GetComponent<Button>(); 
         btn.onClick.AddListener(TaskOnClick);
     }
 
     void TaskOnClick()
     {
-        if (inputTextField.text.Contains(answerOfMission))
+        CheckAnswer();
+
+        if (_answerCorrect)
         {
-            outputTextField.text = "Hello, world! <br><br><color=green>Correct!</color>";
+            OutputTextField.text = "Hello, world! <br><br><color=green>Correct!</color>";
             LevelSucceed();
         }
         else
         {
-            outputTextField.text = "Try again...";
+            OutputTextField.text = "Try again...";
+        }
+    }
+
+    void CheckAnswer()
+    {
+        for(int i = 0; i < _missionVariables.correctAnswers.Length; i++)
+        {
+            if (InputTextField.text.Contains(_missionVariables.correctAnswers[i]))
+            {
+                _answerCorrect = true;
+                break;
+            }
         }
     }
 
     void LevelSucceed()
     {
         LevelIdeSucceed = true;
+        SceneManager.LoadScene(EnumSceneDropDownSelect.ToString());
     }
 }
