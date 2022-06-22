@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Assets.Scripts.ScriptsTobias;
@@ -11,13 +9,16 @@ public class LoadMissionIDE : MonoBehaviour
     public TextMeshProUGUI MissionTitleTB;
 
     [Tooltip("Mission description textbox")]
-    public TextMeshProUGUI MissionDescrTB;
+    public TextMeshProUGUI MissionDescriptionTB;
 
     [Tooltip("IDE input textbox")]
     public TextMeshProUGUI IdeInput;
 
     // Get and fill MissionVariables
-    private MissionVariables _missionVariables { get {
+    private MissionVariables _missionVariables
+    {
+        get
+        {
             return LoadJson();
         }
     }
@@ -44,19 +45,19 @@ public class LoadMissionIDE : MonoBehaviour
 
     void FillVariables()
     {
-        BuildDesc();
+        BuildDescription();
         MissionTitleTB.text = _missionVariables.missionTitle;
         IdeInput.text = _missionVariables.startInput;
     }
 
-    void BuildDesc() // Build description textbox text
+    void BuildDescription() // Build description textbox text
     {
-        string tempDescr;
+        string tempDescription;
 
-        tempDescr = "<color=\"" + _missionVariables.missionLanguageColor + "\">" + _missionVariables.missionLanguageName + "</color>";
-        tempDescr += "<br><br>";
-        tempDescr += _missionVariables.missionDescription;
-
-        MissionDescrTB.text = tempDescr;
+        tempDescription = "<color=\"" + _missionVariables.missionLanguageColor + "\">" + _missionVariables.missionLanguageName + "</color>";
+        tempDescription += "<br><br>";
+        tempDescription += _missionVariables.missionDescription;
+        
+        MissionDescriptionTB.text = tempDescription;
     }
 }

@@ -9,13 +9,12 @@ public class DoorMoos : MonoBehaviour
     [SerializeField] private bool openTrigger = false;
     [SerializeField] private bool closedTrigger = false;
 
-    private CheckScript checkScript;
     private GameControler gameControler;
 
     private void Start()
     {
         gameControler = GameObject.FindObjectOfType<GameControler>();
-        checkScript = GameObject.FindObjectOfType<CheckScript>();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,13 +23,13 @@ public class DoorMoos : MonoBehaviour
         {
             if (openTrigger)
             {
-                Debug.Log(checkScript.LevelIdeSucceed);
-                if (gameControler.levelBallsSucceed == true && checkScript.LevelIdeSucceed == true)
+                if (gameControler.levelBallsSucceed == true && gameControler.LevelIdeSucceed == true)
                 {
                     myDoor.Play("DoorOpen", 0, 0.0f);
                     gameObject.SetActive(false);
                 }
             }
+
             else if (closedTrigger)
             {
                 myDoor.Play("DoorClose", 0, 0.0f);

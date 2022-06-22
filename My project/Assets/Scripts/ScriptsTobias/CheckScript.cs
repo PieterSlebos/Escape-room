@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -18,25 +16,22 @@ public class CheckScript : MonoBehaviour
     [Tooltip("IDE output textbox")]
     public TextMeshProUGUI OutputTextField;
 
-    [Tooltip("Select scene after complete.")]
-    public SceneNamesEnum EnumSceneDropDownSelect = new SceneNamesEnum();
-
-    [HideInInspector]
-    public bool LevelIdeSucceed;
-
     private bool _answerCorrect = false;
 
+    private GameControler _gameControler;
+
     // Get and fill MissionVariables
-    private MissionVariables _missionVariables { get {
+    private MissionVariables _missionVariables
+    {
+        get
+        {
             return LoadJson();
         }
     }
 
-
     public MissionVariables LoadJson()
     {
         MissionVariables items = new MissionVariables();
-
         using (StreamReader r = new StreamReader("Assets/JSON/JSON_Tobias/Level_IDE/IdeMissionJSON.json"))
         {
             string json = r.ReadToEnd();
@@ -45,14 +40,13 @@ public class CheckScript : MonoBehaviour
 
         return items;
     }
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         LoadJson();
-
-        Button btn = RunButton.GetComponent<Button>(); 
+        Button btn = RunButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
+        _gameControler = GameObject.FindObjectOfType<GameControler>();
     }
 
     void TaskOnClick()
@@ -72,7 +66,7 @@ public class CheckScript : MonoBehaviour
 
     void CheckAnswer()
     {
-        for(int i = 0; i < _missionVariables.correctAnswers.Length; i++)
+        for (int i = 0; i < _missionVariables.correctAnswers.Length; i++)
         {
             if (InputTextField.text.Contains(_missionVariables.correctAnswers[i]))
             {
@@ -84,7 +78,7 @@ public class CheckScript : MonoBehaviour
 
     void LevelSucceed()
     {
-        LevelIdeSucceed = true;
-        SceneManager.LoadScene(EnumSceneDropDownSelect.ToString());
+        _gameControler.LevelIdeSucceed = true;
+        SceneManager.LoadScene("Scene_Lobby");
     }
 }

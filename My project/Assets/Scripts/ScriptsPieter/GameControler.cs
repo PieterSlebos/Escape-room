@@ -12,6 +12,8 @@ public class GameControler : MonoBehaviour
     public bool levelBallsSucceed;
     public int coinsCollected;
 
+    public bool LevelIdeSucceed;
+
 
     // Start is called before the first frame update
     void Start()
