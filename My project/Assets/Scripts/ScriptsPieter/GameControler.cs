@@ -25,7 +25,7 @@ public class GameControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (coinsCollected == 5 && !levelBallsSucceed)
+        if (coinsCollected == 10 && !levelBallsSucceed)
         {
             SceneManager.LoadScene("Scene_Lobby");
             levelBallsSucceed = true;
