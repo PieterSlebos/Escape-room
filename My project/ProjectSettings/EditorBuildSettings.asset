@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/__Scenes/Level_Moos/Level_Moos.unity
+    guid: 491743294f1847a49b408360bb552eed
   m_configObjects: {}
