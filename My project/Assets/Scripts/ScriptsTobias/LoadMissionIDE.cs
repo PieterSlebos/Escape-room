@@ -1,10 +1,7 @@
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
 using Assets.Scripts.ScriptsTobias;
 using System.IO;
-//namespace Assets.Scripts.ScriptsTobias;
 
 public class LoadMissionIDE : MonoBehaviour
 {
@@ -12,7 +9,7 @@ public class LoadMissionIDE : MonoBehaviour
     public TextMeshProUGUI MissionTitleTB;
 
     [Tooltip("Mission description textbox")]
-    public TextMeshProUGUI MissionDescrTB;
+    public TextMeshProUGUI MissionDescriptionTB;
 
     [Tooltip("IDE input textbox")]
     public TextMeshProUGUI IdeInput;
@@ -48,19 +45,19 @@ public class LoadMissionIDE : MonoBehaviour
 
     void FillVariables()
     {
-        BuildDesc();
+        BuildDescription();
         MissionTitleTB.text = _missionVariables.missionTitle;
         IdeInput.text = _missionVariables.startInput;
     }
 
-    void BuildDesc() // Build description textbox text
+    void BuildDescription() // Build description textbox text
     {
-        string tempDescr;
+        string tempDescription;
 
-        tempDescr = "<color=\"" + _missionVariables.missionLanguageColor + "\">" + _missionVariables.missionLanguageName + "</color>";
-        tempDescr += "<br><br>";
-        tempDescr += _missionVariables.missionDescription;
+        tempDescription = "<color=\"" + _missionVariables.missionLanguageColor + "\">" + _missionVariables.missionLanguageName + "</color>";
+        tempDescription += "<br><br>";
+        tempDescription += _missionVariables.missionDescription;
         
-        MissionDescrTB.text = tempDescr;
+        MissionDescriptionTB.text = tempDescription;
     }
 }

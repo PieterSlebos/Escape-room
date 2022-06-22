@@ -4,7 +4,7 @@
     "missionDescription" : "Print \"Hello, world!\" on the console. In Python.",
     "missionLanguageName" : "Python",
     "missionLanguageColor" : "yellow",
-    "startInput" : "print('Hello, world!')",
+    "startInput" : "",
     "correctAnswers" : [
         "print('Hello, world!')",
         "print(\"Hello, world!\")"
