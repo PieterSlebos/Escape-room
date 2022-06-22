@@ -16,10 +16,9 @@ public class CheckScript : MonoBehaviour
     [Tooltip("IDE output textbox")]
     public TextMeshProUGUI OutputTextField;
 
-    [HideInInspector]
-    public bool LevelIdeSucceed;
-
     private bool _answerCorrect = false;
+
+    private GameControler _gameControler;
 
     // Get and fill MissionVariables
     private MissionVariables _missionVariables
@@ -47,6 +46,7 @@ public class CheckScript : MonoBehaviour
         LoadJson();
         Button btn = RunButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
+        _gameControler = GameObject.FindObjectOfType<GameControler>();
     }
 
     void TaskOnClick()
@@ -78,7 +78,7 @@ public class CheckScript : MonoBehaviour
 
     void LevelSucceed()
     {
-        LevelIdeSucceed = true;
+        _gameControler.LevelIdeSucceed = true;
         SceneManager.LoadScene("Scene_Lobby");
     }
 }
