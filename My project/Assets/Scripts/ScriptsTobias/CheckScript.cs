@@ -66,19 +66,15 @@ public class CheckScript : MonoBehaviour
 
     void CheckAnswer()
     {
-        for (int i = 0; i < _missionVariables.correctAnswers.Length; i++)
+        if (InputTextField.text.Contains("print('Hello, world!')"))
         {
-            if (InputTextField.text.Contains(_missionVariables.correctAnswers[i]))
-            {
-                _answerCorrect = true;
-                break;
-            }
-        }
+            _answerCorrect = true;
+        }   
     }
 
     void LevelSucceed()
     {
-        _gameControler.LevelIdeSucceed = true;
+        //_gameControler.LevelIdeSucceed = true;
         SceneManager.LoadScene("Scene_Lobby");
     }
 }

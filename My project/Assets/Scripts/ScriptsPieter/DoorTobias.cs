@@ -24,11 +24,11 @@ public class DoorTobias : MonoBehaviour
             if (openTrigger)
             {
 
-                if (gameControler.levelBallsSucceed == true)
-                {
+                //if (gameControler.levelBallsSucceed == true)
+                //{
                     myDoor.Play("DoorOpen", 0, 0.0f);
                     gameObject.SetActive(false);
-                }
+                //}
             }
 
             else if (closedTrigger)
